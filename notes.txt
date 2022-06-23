@@ -1,0 +1,12 @@
+Setting Up Virtual Environment for Python Projects
+> python -m venv .venv
+To Activate (You'll see (.venv) in terminal if activated)
+> .venv\Scripts\Activate.ps1
+To Deactivate
+> deactivate
+
+Installed Libraries
+> py -m pip install --upgrade pip
+> py -m pip install requests
+> py -m pip install bs4
+> py -m pip install html5lib
