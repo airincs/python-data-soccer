@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-## Test code from https://www.geeksforgeeks.org/implementing-web-scraping-python-beautiful-soup/
-URL = "http://www.values.com/inspirational-quotes"
+URL = "https://fbref.com/en/comps/9/Premier-League-Stats"
 r = requests.get(URL)
 
-soup = BeautifulSoup(r.content, 'html5lib') # If this line causes an error, run 'pip install html5lib' or install html5lib
-print(soup.prettify())
+soup = BeautifulSoup(r.content, 'html5lib')
+
+for element in soup.find_all('td', {"data-stat": "wins"}):
+  print(element.text)
