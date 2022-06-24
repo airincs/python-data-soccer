@@ -10,3 +10,4 @@ Installed Libraries
 > py -m pip install requests
 > py -m pip install bs4
 > py -m pip install html5lib
+> py -m pip install pandas
