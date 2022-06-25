@@ -54,10 +54,18 @@ def table_extractor(url, all_lists, keyword_list):
 #shooting_df = pd.concat([shooting_21_22, shooting_20_21, shooting_19_20])
 
 ## Gathering 'passing' statistics
-keyword_list = ["passes_completed", "passes_pct", "assisted_shots"]
-passes_completed, passes_pct, assisted_shots = ([] for i in range(3))
-all_lists = (passes_completed, passes_pct, assisted_shots)
-passing_21_22 = table_extractor("https://fbref.com/en/comps/9/shooting/Premier-League-Stats", all_lists, keyword_list)
+keyword_list = ["passes_completed", "passes_pct", "assisted_shots", "passes_completed_short"]
+passes_completed, passes_pct, assisted_shots, passes_completed_short = ([] for i in range(4))
+all_lists = (passes_completed, passes_pct, assisted_shots, passes_completed_short)
+passing_21_22 = table_extractor("https://fbref.com/en/comps/9/passing/Premier-League-Stats", all_lists, keyword_list)
 passing_21_22 = passing_21_22.iloc[:20]
-passes_completed, passes_pct, assisted_shots = ([] for i in range(3))
-all_lists = (passes_completed, passes_pct, assisted_shots)
+passes_completed, passes_pct, assisted_shots, passes_completed_short = ([] for i in range(4))
+all_lists = (passes_completed, passes_pct, assisted_shots, passes_completed_short)
+passing_20_21 = table_extractor("https://fbref.com/en/comps/9/10728/passing/2020-2021-Premier-League-Stats", all_lists, keyword_list)
+passing_20_21 = passing_21_22.iloc[:20]
+passes_completed, passes_pct, assisted_shots, passes_completed_short = ([] for i in range(4))
+all_lists = (passes_completed, passes_pct, assisted_shots, passes_completed_short)
+passing_19_20 = table_extractor("https://fbref.com/en/comps/9/3232/passing/2019-2020-Premier-League-Stats", all_lists, keyword_list)
+passing_19_20 = passing_21_22.iloc[:20]
+
+passing_df = pd.concat([passing_21_22, passing_20_21, passing_19_20])
