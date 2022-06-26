@@ -65,11 +65,11 @@ passing_21_22 = passing_21_22.iloc[:20]
 passes_completed, passes_pct, assisted_shots, passes_completed_short = ([] for i in range(4))
 all_lists = (passes_completed, passes_pct, assisted_shots, passes_completed_short)
 passing_20_21 = table_extractor("https://fbref.com/en/comps/9/10728/passing/2020-2021-Premier-League-Stats", all_lists, keyword_list)
-passing_20_21 = passing_21_22.iloc[:20]
+passing_20_21 = passing_20_21.iloc[:20]
 passes_completed, passes_pct, assisted_shots, passes_completed_short = ([] for i in range(4))
 all_lists = (passes_completed, passes_pct, assisted_shots, passes_completed_short)
 passing_19_20 = table_extractor("https://fbref.com/en/comps/9/3232/passing/2019-2020-Premier-League-Stats", all_lists, keyword_list)
-passing_19_20 = passing_21_22.iloc[:20]
+passing_19_20 = passing_19_20.iloc[:20]
 
 passing_df = pd.concat([passing_21_22, passing_20_21, passing_19_20])
 passing_df.to_csv("passingDF.csv", encoding='utf-8', index=False)
