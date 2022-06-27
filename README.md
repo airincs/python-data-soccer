@@ -21,3 +21,9 @@ The results were as expected, for the most part. Variables such as passing perce
 Here is a visual plot created via R that shows the Average Shot Distance against the number of goals in a season. While not overly remarkable, I do find it interesting that the 16 range has the most amount of goals scored. It is apparent that teams that relied on far distance shots were less successful in scoring, possibly due to their inability to get closer to the goal in order to shoot.
 
 ![alt text](https://github.com/airincs/soccer-data/blob/main/images/AvgShotDistanceGoals.png?raw=true)
+
+## Webscraping
+
+View my webscraping code here: (https://github.com/airincs/soccer-data/blob/main/webscraper.py)
+
+I primarily used the BeautifulSoup library in order to scrape this data. There were some problems along the way with consistency; however, they were mostly corrected with cleaning up code. Depending on several factors, there were often times when the webscraper wouldn't scrape data (i.e. due to networking issues and traffic). Several functions were created that simplified the process.
